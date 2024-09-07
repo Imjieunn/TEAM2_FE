@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "light";
+  src: url("./constants/fonts/Pretendard-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "medium";
+  src: url("./constants/fonts/Pretendard-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "semiBold";
+  src: url("./constants/fonts/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("./constants/fonts/Pretendard-Bold.woff") format("woff");
+}
+
+@layer utilities {
+  .flex-template {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-col-template {
+    @apply flex flex-col items-center justify-center h-full w-full;
+  }
+}
+
+/* styles.css */
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+}
+
+.App {
+  font-family: "medium";
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
