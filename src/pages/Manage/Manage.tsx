@@ -1,5 +1,9 @@
 const Manage = () => {
-  return <>멘토링 관리 페이지</>;
+  return (
+    <>
+      <img src="/img/manageImg.svg" />
+    </>
+  );
 };
 
 export default Manage;

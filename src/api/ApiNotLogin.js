@@ -20,7 +20,7 @@ instance.interceptors.request.use(
 
 const get = async (url) => {
   try {
-    const { data } = await instance.get(url);
+    const { data } = await instance.get(url, { withCredentials: true });
     return data;
   } catch (error) {
     console.log(error);
