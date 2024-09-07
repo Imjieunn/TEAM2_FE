@@ -22,7 +22,7 @@ const GnbBottom = () => {
   ];
 
   const location = useLocation();
-  const isActive = (path) => {
+  const isActive = (path: string) => {
     // location.pathname.startsWith(path);
     return location.pathname === path;
   };
