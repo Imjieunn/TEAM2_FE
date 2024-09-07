@@ -1,5 +1,4 @@
 import GnbBottom from "./components/Gnb/GnbBottom";
-import GnbTop from "./components/Gnb/GnbTop";
 import Router from "./Router";
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
     <div className="App">
       <div className="MobileContainer">
         <Router />
-        <GnbTop />
         <GnbBottom />
       </div>
     </div>

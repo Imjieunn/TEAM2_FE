@@ -36,7 +36,7 @@ const GnbBottom = () => {
   }, [location]);
 
   return (
-    <div className="absolute bottom-0 h-[83px] w-[100%] flex bg-white">
+    <div className="absolute bottom-0 h-[83px] w-[100%] flex bg-white text-[10px]">
       {menus.map((menu, idx) => (
         <Link
           to={menu.link}

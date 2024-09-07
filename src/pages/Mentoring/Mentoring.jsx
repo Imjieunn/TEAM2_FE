@@ -1,5 +1,11 @@
+import GnbTop from "../../components/Gnb/GnbTop";
+
 const Mentoring = () => {
-  return <>멘토링 페이지</>;
+  return (
+    <>
+      <GnbTop />
+    </>
+  );
 };
 
 export default Mentoring;
