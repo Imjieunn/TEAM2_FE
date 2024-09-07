@@ -1,5 +1,9 @@
 const Profile = () => {
-  return <>프로필 페이지</>;
+  return (
+    <>
+      <img src="/img/profileImg.svg" />
+    </>
+  );
 };
 
 export default Profile;

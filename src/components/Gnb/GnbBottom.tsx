@@ -23,20 +23,17 @@ const GnbBottom = () => {
 
   const location = useLocation();
   const isActive = (path: string) => {
-    // location.pathname.startsWith(path);
-    return location.pathname === path;
+    return location.pathname.startsWith(path);
   };
 
   const [currentPath, setCurrentPath] = useState(location.pathname);
-  // const [active, setActive] = useState(false);
 
   useEffect(() => {
     setCurrentPath(location.pathname);
-    console.log(currentPath);
   }, [location]);
 
   return (
-    <div className="absolute bottom-0 h-[83px] w-[100%] flex bg-white text-[10px]">
+    <div className="absolute bottom-0 h-[83px] w-[100%] flex bg-white text-[10px] border border-t-Gray-200">
       {menus.map((menu, idx) => (
         <Link
           to={menu.link}

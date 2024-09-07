@@ -1,4 +1,24 @@
+import { Link } from "react-router-dom";
+import * as API from "../../api/ApiNotLogin";
+import { useEffect } from "react";
+
 const Login = () => {
+  const baseUrl = process.env.REACT_APP_API_URL;
+
+  // const getToken = async () => {
+  //   try {
+  //     const response = await API.get("/auth/kakao");
+  //     console.log(response);
+  //     // const token = response.data.token;
+  //     // if (token) {
+  //     //   localStorage.setItem("authToken", token);
+  //     //   console.log(token);
+  //     // }
+  //   } catch (error) {
+  //     console.error("Error fetching token:", error);
+  //   }
+  // };
+
   return (
     <div className="flex-col-template">
       <div className="px-[65px] flex-col-template gap-[37px] flex-2">
@@ -14,7 +34,13 @@ const Login = () => {
           로그인/회원가입
           <img src="/img/hr.svg" alt="구분선" />
         </p>
-        <img src="/img/kakaoLogin.svg" alt="카카오 로그인 버튼" />
+        <Link to={`${baseUrl}/auth/kakao`}>
+          <img
+            src="/img/kakaoLogin.svg"
+            alt="카카오 로그인 버튼"
+            // onClick={getToken}
+          />
+        </Link>
         <p className="text-Gray-300">로그인하기</p>
       </div>
     </div>

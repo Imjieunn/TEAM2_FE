@@ -1,16 +1,19 @@
 import { RecoilRoot } from "recoil";
+import { useCookies } from "react-cookie";
 import GnbBottom from "./components/Gnb/GnbBottom";
 import Router from "./Router";
+import { useLocation } from "react-router-dom";
 
 function App() {
-  const token = sessionStorage.getItem("token");
+  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+  const location = useLocation();
 
   return (
     <RecoilRoot>
       <div className="App">
         <div className="MobileContainer">
           <Router />
-          {token && <GnbBottom />}
+          {location.pathname !== "/login" && <GnbBottom />}
         </div>
       </div>
     </RecoilRoot>
