@@ -75,7 +75,7 @@
   width: 480px;
   min-height: 100vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #f1f3f9;
   overflow: hidden;
   overflow-wrap: break-word;
   position: relative;
@@ -90,4 +90,12 @@
     padding: 0;
     box-shadow: none;
   }
+}
+
+.ContentsContainer {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
