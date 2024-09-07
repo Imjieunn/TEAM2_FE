@@ -7,7 +7,7 @@ const Mentoring = () => {
   return (
     <>
       <GnbTop />
-      <div className="ContentsContainer gap-[24px]">
+      <div className="ContentsContainer gap-[24px] mt-[65px] mb-[90px]">
         <Search />
         <Category />
         <MentorLists />
