@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Main from "./pages/Main/Main";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
@@ -10,7 +10,7 @@ import Mentoring from "./pages/Mentoring/Mentoring";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
+      <Route path="/" element={<Navigate to="/mentoring" />} />
       <Route path="/login" element={<Login />} />
       <Route path="/mentoring" element={<Mentoring />} />
       <Route path="/manage" element={<Manage />} />
